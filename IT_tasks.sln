@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightingApp", "LightingApp\LightingApp.csproj", "{655671EF-BC1B-6E13-FAC2-5FB6A403B700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearListApp", "LinearListApp\LinearListApp.csproj", "{A6C268A3-BDCF-3EA9-BB04-2DF72FF34615}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{655671EF-BC1B-6E13-FAC2-5FB6A403B700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655671EF-BC1B-6E13-FAC2-5FB6A403B700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655671EF-BC1B-6E13-FAC2-5FB6A403B700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655671EF-BC1B-6E13-FAC2-5FB6A403B700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6C268A3-BDCF-3EA9-BB04-2DF72FF34615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C268A3-BDCF-3EA9-BB04-2DF72FF34615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C268A3-BDCF-3EA9-BB04-2DF72FF34615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C268A3-BDCF-3EA9-BB04-2DF72FF34615}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C86C4F1-7230-4034-AE0D-0F0DF6553B3B}
+	EndGlobalSection
+EndGlobal

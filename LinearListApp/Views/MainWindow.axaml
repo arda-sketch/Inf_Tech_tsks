@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LinearListApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="LinearListApp.Views.MainWindow"
+        Title="Линейный список">
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <StackPanel Margin="20" Spacing="10" x:DataType="vm:MainWindowViewModel">
+        <TextBlock Text="Демо линейного списка" FontSize="20"/>
+        <TextBox Text="{Binding NewItem}" Watermark="Введите элемент"/>
+        <Button Content="Добавить" Command="{Binding AddCommand}"/>
+        <Button Content="Удалить текущий" Command="{Binding RemoveCommand}"/>
+        <Button Content="К следующему" Command="{Binding MoveNextCommand}"/>
+        <Button Content="В начало" Command="{Binding MoveToStartCommand}"/>
+        <TextBlock Text="Текущий элемент:"/>
+        <TextBlock Text="{Binding CurrentElement}" FontWeight="Bold"/>
+        <TextBlock Text="Количество элементов:"/>
+        <TextBlock Text="{Binding Count}" FontWeight="Bold"/>
+        <TextBlock Text="Пустой список:"/>
+        <TextBlock Text="{Binding IsEmpty}" FontWeight="Bold"/>
+        <TextBlock Text="Все элементы списка:"/>
+        <TextBlock Text="{Binding ItemsString}" FontWeight="Bold" TextWrapping="Wrap"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LightingApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="LightingApp.Views.MainWindow"
+        Title="Осветительные приборы">
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <StackPanel Margin="20" Spacing="10" x:DataType="vm:MainWindowViewModel">
+        <TextBlock Text="Осветительные приборы" FontSize="20"/>
+        <ItemsControl ItemsSource="{Binding Devices}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="vm:DeviceViewModel">
+                    <Grid ColumnDefinitions="100,100,100,100,100,150*" Margin="5">
+                        <TextBlock Grid.Column="0" Text="{Binding Name}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Status}"/>
+                        <Button Grid.Column="2" Content="Включить" Command="{Binding TurnOnCommand}" IsVisible="{Binding IsOperational}"/>
+                        <Button Grid.Column="3" Content="Выключить" Command="{Binding TurnOffCommand}" IsVisible="{Binding IsOperational}"/>
+                        <Button Grid.Column="4" Content="Подключить" Command="{Binding PlugInCommand}" IsVisible="{Binding CanPlugIn}"/>
+                        <Button Grid.Column="4" Content="Отключить" Command="{Binding UnplugCommand}" IsVisible="{Binding CanUnplug}"/>
+                        <TextBlock Grid.Column="5" Text="{Binding ConnectionStatus}" TextWrapping="Wrap" IsVisible="{Binding HasPlug}"/>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Window>
